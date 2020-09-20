@@ -36,6 +36,7 @@
             this.comboColor = new System.Windows.Forms.ComboBox();
             this.BtnRegrasar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             this.comboCity.Name = "comboCity";
             this.comboCity.Size = new System.Drawing.Size(152, 23);
             this.comboCity.TabIndex = 0;
+            this.comboCity.SelectedIndexChanged += new System.EventHandler(this.comboCity_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -72,6 +74,7 @@
             this.comboGama.Name = "comboGama";
             this.comboGama.Size = new System.Drawing.Size(121, 23);
             this.comboGama.TabIndex = 3;
+            this.comboGama.SelectedIndexChanged += new System.EventHandler(this.comboGama_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -89,6 +92,7 @@
             this.comboColor.Name = "comboColor";
             this.comboColor.Size = new System.Drawing.Size(121, 23);
             this.comboColor.TabIndex = 5;
+            this.comboColor.SelectedIndexChanged += new System.EventHandler(this.comboColor_SelectedIndexChanged);
             // 
             // BtnRegrasar
             // 
@@ -109,11 +113,22 @@
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.Text = "dataGridView1";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(536, 106);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Limpiar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ReporteMultiparametro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BtnRegrasar);
             this.Controls.Add(this.comboColor);
@@ -141,5 +156,6 @@
         private System.Windows.Forms.ComboBox comboColor;
         private System.Windows.Forms.Button BtnRegrasar;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }
