@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboGama = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -44,13 +44,13 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.Text = "dataGridView1";
             // 
-            // comboBox1
+            // comboGama
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(22, 61);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(290, 23);
-            this.comboBox1.TabIndex = 1;
+            this.comboGama.FormattingEnabled = true;
+            this.comboGama.Location = new System.Drawing.Point(22, 61);
+            this.comboGama.Name = "comboGama";
+            this.comboGama.Size = new System.Drawing.Size(290, 23);
+            this.comboGama.TabIndex = 1;
             // 
             // button1
             // 
@@ -78,7 +78,7 @@
             this.ClientSize = new System.Drawing.Size(797, 450);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboGama);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ReporteGama";
             this.Text = "ReporteGama";
@@ -90,7 +90,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboGama;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }
