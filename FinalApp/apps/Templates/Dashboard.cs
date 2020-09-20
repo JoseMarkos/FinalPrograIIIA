@@ -14,12 +14,15 @@ namespace FinalApp.apps.Templates
 {
     public partial class Dashboard : Form
     {
-        private readonly Dictionary<string, IController> MenuItems;
+        private readonly Dictionary<string, IController> RegistroMenuItems;
+        private readonly Dictionary<string, IController> ReporteMenuItems;
         public Dashboard(Dictionary<string, object> data)
         {
-            MenuItems = (Dictionary<string, IController>)data["menuItems"];
+            RegistroMenuItems = (Dictionary<string, IController>)data["registroMenuItems"];
+            ReporteMenuItems = (Dictionary<string, IController>)data["reporteMenuItems"];
             InitializeComponent();
             PopulateComboRegistro();
+            PopulateComboReportes();
             PopulateGrid();
         }
 
@@ -30,7 +33,16 @@ namespace FinalApp.apps.Templates
 
         private void OpenFormDialog(string key)
         {
-            var controller = MenuItems[key];
+            var controller = RegistroMenuItems[key];
+            var form = controller.GetForm();
+
+            this.Hide();
+            form.ShowDialog();
+        }
+
+        private void OpenFormDialog2(string key)
+        {
+            var controller = ReporteMenuItems[key];
             var form = controller.GetForm();
 
             this.Hide();
@@ -39,12 +51,23 @@ namespace FinalApp.apps.Templates
 
         private void PopulateComboRegistro()
         {
-            var itemNames = from item in MenuItems
+            var itemNames = from item in RegistroMenuItems
                             select item.Key;
 
             foreach (var item in itemNames)
             {
                 comboRegistros.Items.Add(item);
+            }
+        }
+
+        private void PopulateComboReportes()
+        {
+            var itemNames = from item in ReporteMenuItems
+                            select item.Key;
+
+            foreach (var item in itemNames)
+            {
+                comboReportes.Items.Add(item);
             }
         }
 
@@ -65,6 +88,11 @@ namespace FinalApp.apps.Templates
         protected void Exit(object sender, FormClosedEventArgs e)
         {
             Environment.Exit(1);
+        }
+
+        private void comboReportes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OpenFormDialog2(comboReportes.SelectedItem.ToString());
         }
     }
 }

@@ -194,6 +194,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboCity);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreateRegistro";
             this.Text = "CreateRegistro";
             this.ResumeLayout(false);

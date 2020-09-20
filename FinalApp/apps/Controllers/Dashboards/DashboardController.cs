@@ -10,20 +10,23 @@ namespace FinalApp.apps.Controllers.Dashboards
     {
         public Form GetForm()
         {
-            var registroRepository = 2;
-
             var routes = Routes.GetRoutes();
 
-            var menuItems = new Dictionary<string, IController>
+            var registroMenuItems = new Dictionary<string, IController>
             {
                 { "Add a register", (IController)routes["CreateRegistro"] },
-                //{ "Report by Gama", (IController)routes["ReporteGama"] },
-               // { "Report multiparametros", (IController)routes["ReporteMultiparametros"] }
+            };
+
+            var reporteMenuItems = new Dictionary<string, IController>
+            {
+                { "Report by Gama", (IController)routes["ReporteGama"] },
+                { "Report multiparametros", (IController)routes["ReporteMultiparametro"] }
             };
 
             var data = new Dictionary<string, object>
             {
-                { "menuItems", menuItems },
+                { "registroMenuItems", registroMenuItems },
+                { "reporteMenuItems", reporteMenuItems },
             };
 
             var form = new Dashboard(data);

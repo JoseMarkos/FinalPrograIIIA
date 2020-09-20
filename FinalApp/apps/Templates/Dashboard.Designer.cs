@@ -52,6 +52,7 @@
             this.comboReportes.Size = new System.Drawing.Size(121, 23);
             this.comboReportes.TabIndex = 1;
             this.comboReportes.Text = "Reportes";
+            this.comboReportes.SelectedIndexChanged += new System.EventHandler(this.comboReportes_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
