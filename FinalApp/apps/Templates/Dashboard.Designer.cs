@@ -49,7 +49,7 @@
             this.comboReportes.FormattingEnabled = true;
             this.comboReportes.Location = new System.Drawing.Point(163, 12);
             this.comboReportes.Name = "comboReportes";
-            this.comboReportes.Size = new System.Drawing.Size(121, 23);
+            this.comboReportes.Size = new System.Drawing.Size(162, 23);
             this.comboReportes.TabIndex = 1;
             this.comboReportes.Text = "Reportes";
             this.comboReportes.SelectedIndexChanged += new System.EventHandler(this.comboReportes_SelectedIndexChanged);

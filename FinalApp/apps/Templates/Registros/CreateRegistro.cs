@@ -62,7 +62,7 @@ namespace FinalApp.apps.Templates.Registros
             crearRegistroCommandHandler.Trigger(command);
         }
 
-        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        private void TxtPrecio_TextChanged(object sender, EventArgs e)
         {
             NewMethod1();
         }
