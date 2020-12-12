@@ -1,6 +1,7 @@
-﻿using FinalApp.src.Data.Registros;
-using FinalApp.src.Data.Telefonos;
+﻿
 using Microsoft.EntityFrameworkCore;
+using Modelos.Registros;
+using Modelos.Telefonos;
 using System;
 using System.Collections.Generic;
 using System.Text;

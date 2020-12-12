@@ -1,6 +1,6 @@
-﻿using FinalApp.src.Data.Telefonos;
-using FinalApp.src.Shared.Infrastructure.Persistance;
+﻿using FinalApp.src.Shared.Infrastructure.Persistance;
 using FinalApp.src.Telefonos.Domain;
+using Modelos.Telefonos;
 using System;
 using System.Collections.Generic;
 using System.Linq;

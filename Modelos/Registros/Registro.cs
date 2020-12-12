@@ -1,9 +1,9 @@
-﻿using FinalApp.src.Data.Telefonos;
+﻿using Modelos.Telefonos;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FinalApp.src.Data.Registros
+namespace Modelos.Registros
 {
     public class Registro
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FinalApp.src.Data.Telefonos
+namespace Modelos.Telefonos
 {
     public class TelefonoColor
     {
