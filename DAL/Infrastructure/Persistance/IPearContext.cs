@@ -1,14 +1,13 @@
-﻿
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Modelos.Registros;
 using Modelos.Telefonos;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FinalApp.src.Shared.Infrastructure.Persistance
+namespace DAL.Infrastructure.Persistance
 {
-    public class IPearContext : DbContext
+    class IPearContext : DbContext
     {
         public DbSet<TelefonoCiudadEnsanblaje> TelefonoCiudadEnsanblajes { get; set; }
         public DbSet<TelefonoGama> TelefonoGamas { get; set; }
