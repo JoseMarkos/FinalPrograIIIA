@@ -61,7 +61,7 @@
             this.comboCity.Name = "comboCity";
             this.comboCity.Size = new System.Drawing.Size(261, 23);
             this.comboCity.TabIndex = 1;
-            this.comboCity.SelectedIndexChanged += new System.EventHandler(this.comboCity_SelectedIndexChanged);
+            this.comboCity.SelectedIndexChanged += new System.EventHandler(this.ComboCity_SelectedIndexChanged);
             // 
             // label2
             // 

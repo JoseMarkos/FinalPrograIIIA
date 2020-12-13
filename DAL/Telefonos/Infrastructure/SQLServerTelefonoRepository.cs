@@ -8,7 +8,7 @@ using System.Text;
 
 namespace DAL.Telefonos.Infrastructure
 {
-    class SQLServerTelefonoRepository : ITelefonoRepository
+    public class SQLServerTelefonoRepository : ITelefonoRepository
     {
         public void Save(Telefono telefono)
         {

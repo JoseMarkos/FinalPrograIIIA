@@ -1,7 +1,4 @@
-﻿using FinalApp.src.Data.Telefonos;
-using FinalApp.src.Shared.Infrastructure.Persistance;
-using FinalApp.src.Telefonos.Infrastructure.Persistance;
-using iTextSharp.text;
+﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
@@ -12,6 +9,10 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using BL.src.Reportes.Application.SearchTelefnoGamasAll;
+using Modelos.Telefonos;
+using DAL.Shared.Infrastructure.Persistance;
+using DAL.Telefonos.Infrastructure;
 
 namespace FinalApp.apps.Templates.Reportes
 {
@@ -41,12 +42,7 @@ namespace FinalApp.apps.Templates.Reportes
 
         private void PopulateComboGama()
         {
-            using var context = new IPearContext();
-
-            var list = context.TelefonoGamas.ToList();
-
-            var listNames = from x in list
-                            select x.Name;
+            var listNames = TelefonoGamaSearcher.Trigger();
 
             foreach (var item in listNames)
             {
@@ -163,35 +159,37 @@ namespace FinalApp.apps.Templates.Reportes
             return matches.ToList();
         }
 
-        private void comboCity_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboCity_SelectedIndexChanged(object sender, EventArgs e)
         {
             PopulateGrid();
         }
 
-        private void comboGama_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboGama_SelectedIndexChanged(object sender, EventArgs e)
         {
             PopulateGrid();
         }
 
-        private void comboColor_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboColor_SelectedIndexChanged(object sender, EventArgs e)
         {
             PopulateGrid();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             comboCity.SelectedIndex = -1;
             comboColor.SelectedIndex = -1;
             comboGama.SelectedIndex = -1;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             if (dataGridView1.Rows.Count > 0)
             {
-                SaveFileDialog sfd = new SaveFileDialog();
-                sfd.Filter = "PDF (*.pdf)|*.pdf";
-                sfd.FileName = "reporte.pdf";
+                SaveFileDialog sfd = new SaveFileDialog
+                {
+                    Filter = "PDF (*.pdf)|*.pdf",
+                    FileName = "reporte.pdf"
+                };
                 bool fileError = false;
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {

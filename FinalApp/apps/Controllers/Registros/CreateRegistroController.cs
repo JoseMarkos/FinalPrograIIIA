@@ -1,8 +1,8 @@
-﻿using FinalApp.apps.Templates.Registros;
-using FinalApp.src.Registros.Application.Create;
-using FinalApp.src.Registros.Infrastructure.Persistance;
-using FinalApp.src.Telefonos.Application.Create;
-using FinalApp.src.Telefonos.Infrastructure.Persistance;
+﻿using DAL.Registros.Application.Create;
+using DAL.Registros.Infrastructure.Persistance;
+using DAL.Telefonos.Application.Create;
+using DAL.Telefonos.Infrastructure;
+using FinalApp.apps.Templates.Registros;
 using System;
 using System.Collections.Generic;
 using System.Text;

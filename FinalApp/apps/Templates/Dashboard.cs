@@ -1,6 +1,5 @@
-﻿using FinalApp.apps.Controllers;
-using FinalApp.src.Registros.Infrastructure.Persistance;
-using FinalApp.src.Telefonos.Infrastructure.Persistance;
+﻿using DAL.Telefonos.Infrastructure;
+using FinalApp.apps.Controllers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +25,7 @@ namespace FinalApp.apps.Templates
             PopulateGrid();
         }
 
-        private void comboRegistros_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboRegistros_SelectedIndexChanged(object sender, EventArgs e)
         {
             OpenFormDialog(comboRegistros.SelectedItem.ToString());
         }
@@ -90,7 +89,7 @@ namespace FinalApp.apps.Templates
             Environment.Exit(1);
         }
 
-        private void comboReportes_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboReportes_SelectedIndexChanged(object sender, EventArgs e)
         {
             OpenFormDialog2(comboReportes.SelectedItem.ToString());
         }

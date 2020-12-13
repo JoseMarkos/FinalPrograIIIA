@@ -1,7 +1,7 @@
-﻿using FinalApp.src.Registros.Application.Create;
-using FinalApp.src.Shared.Infrastructure.Persistance;
-using FinalApp.src.Telefonos.Application.Create;
-using FinalApp.src.Telefonos.Infrastructure.Persistance;
+﻿using DAL.Registros.Application.Create;
+using DAL.Shared.Infrastructure.Persistance;
+using DAL.Telefonos.Application.Create;
+using DAL.Telefonos.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -173,7 +173,7 @@ namespace FinalApp.apps.Templates.Registros
             }
         }
 
-        private void comboCity_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboCity_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (txtPrecio.Text != String.Empty)
             {

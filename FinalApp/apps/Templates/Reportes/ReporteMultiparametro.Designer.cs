@@ -48,7 +48,7 @@
             this.comboCity.Name = "comboCity";
             this.comboCity.Size = new System.Drawing.Size(152, 23);
             this.comboCity.TabIndex = 0;
-            this.comboCity.SelectedIndexChanged += new System.EventHandler(this.comboCity_SelectedIndexChanged);
+            this.comboCity.SelectedIndexChanged += new System.EventHandler(this.ComboCity_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -75,7 +75,7 @@
             this.comboGama.Name = "comboGama";
             this.comboGama.Size = new System.Drawing.Size(121, 23);
             this.comboGama.TabIndex = 3;
-            this.comboGama.SelectedIndexChanged += new System.EventHandler(this.comboGama_SelectedIndexChanged);
+            this.comboGama.SelectedIndexChanged += new System.EventHandler(this.ComboGama_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -93,7 +93,7 @@
             this.comboColor.Name = "comboColor";
             this.comboColor.Size = new System.Drawing.Size(121, 23);
             this.comboColor.TabIndex = 5;
-            this.comboColor.SelectedIndexChanged += new System.EventHandler(this.comboColor_SelectedIndexChanged);
+            this.comboColor.SelectedIndexChanged += new System.EventHandler(this.ComboColor_SelectedIndexChanged);
             // 
             // BtnRegrasar
             // 
@@ -122,7 +122,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Limpiar";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
@@ -132,7 +132,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "PDF";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // ReporteMultiparametro
             // 

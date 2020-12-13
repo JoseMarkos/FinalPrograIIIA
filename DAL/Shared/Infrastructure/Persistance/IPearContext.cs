@@ -17,7 +17,7 @@ namespace DAL.Shared.Infrastructure.Persistance
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=LAPTOP-8LQEAT9U\\UDEO;database=IPear;Trusted_Connection=true;");
+            optionsBuilder.UseSqlServer("server=DESKTOP-PJSGBAV\\UDEO;database=IPear;Trusted_Connection=true;");
         }
     }
 }

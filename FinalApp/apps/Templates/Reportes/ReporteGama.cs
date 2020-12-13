@@ -1,5 +1,5 @@
-﻿using FinalApp.src.Shared.Infrastructure.Persistance;
-using FinalApp.src.Telefonos.Infrastructure.Persistance;
+﻿using DAL.Shared.Infrastructure.Persistance;
+using DAL.Telefonos.Infrastructure;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System;
@@ -22,7 +22,7 @@ namespace FinalApp.apps.Templates.Reportes
             PopulateComboGama();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             NewMethod2();
         }
@@ -60,7 +60,7 @@ namespace FinalApp.apps.Templates.Reportes
             return comboGama.SelectedIndex + 1;
         }
 
-        private void comboGama_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboGama_SelectedIndexChanged(object sender, EventArgs e)
         {
             PopulateGrid();
         }
@@ -83,13 +83,15 @@ namespace FinalApp.apps.Templates.Reportes
             dataGridView1.Refresh();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             if (dataGridView1.Rows.Count > 0)
             {
-                SaveFileDialog sfd = new SaveFileDialog();
-                sfd.Filter = "PDF (*.pdf)|*.pdf";
-                sfd.FileName = "reporte.pdf";
+                SaveFileDialog sfd = new SaveFileDialog
+                {
+                    Filter = "PDF (*.pdf)|*.pdf",
+                    FileName = "reporte.pdf"
+                };
                 bool fileError = false;
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {

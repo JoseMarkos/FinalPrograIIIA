@@ -42,7 +42,7 @@
             this.comboRegistros.Size = new System.Drawing.Size(121, 23);
             this.comboRegistros.TabIndex = 0;
             this.comboRegistros.Text = "Registros";
-            this.comboRegistros.SelectedIndexChanged += new System.EventHandler(this.comboRegistros_SelectedIndexChanged);
+            this.comboRegistros.SelectedIndexChanged += new System.EventHandler(this.ComboRegistros_SelectedIndexChanged);
             // 
             // comboReportes
             // 
@@ -52,7 +52,7 @@
             this.comboReportes.Size = new System.Drawing.Size(162, 23);
             this.comboReportes.TabIndex = 1;
             this.comboReportes.Text = "Reportes";
-            this.comboReportes.SelectedIndexChanged += new System.EventHandler(this.comboReportes_SelectedIndexChanged);
+            this.comboReportes.SelectedIndexChanged += new System.EventHandler(this.ComboReportes_SelectedIndexChanged);
             // 
             // dataGridView1
             // 

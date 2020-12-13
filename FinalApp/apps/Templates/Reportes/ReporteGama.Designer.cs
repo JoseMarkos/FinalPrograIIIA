@@ -51,7 +51,7 @@
             this.comboGama.Name = "comboGama";
             this.comboGama.Size = new System.Drawing.Size(290, 23);
             this.comboGama.TabIndex = 1;
-            this.comboGama.SelectedIndexChanged += new System.EventHandler(this.comboGama_SelectedIndexChanged);
+            this.comboGama.SelectedIndexChanged += new System.EventHandler(this.ComboGama_SelectedIndexChanged);
             // 
             // button2
             // 
@@ -61,7 +61,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Regresar";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // button1
             // 
@@ -71,7 +71,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "PDF";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // ReporteGama
             // 
